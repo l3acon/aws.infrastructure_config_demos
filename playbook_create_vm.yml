@@ -4,10 +4,15 @@
   connection: local
   gather_facts: false
   vars:
-    create_vm_aws_vpc_subnet_name: "{{ aws_vpc_subnet_name }}"
-    create_vm_aws_keypair_name: "{{ aws_keypair_name }}"
-    create_vm_aws_securitygroup_name: "{{ aws_securitygroup_name }}"
     create_vm_aws_region: "{{ aws_region }}"
+    create_vm_aws_keypair_name: "{{ aws_keypair_name }}"
+    create_vm_aws_vpc_subnet_name: "{{ aws_vpc_subnet_name }}"
+    create_vm_aws_securitygroup_name: "{{ aws_securitygroup_name }}"
+    create_vm_vm_name: "{{ vm_name }}"
+    create_vm_vm_owner: "{{ vm_owner }}"
+    create_vm_vm_deployment: "{{ vm_deployment }}"
+    create_vm_vm_environment: "{{ vm_environment }}"
+
 
   vars_files:
     - "vars/vm_blueprints/{{vm_blueprint}}.yml"
